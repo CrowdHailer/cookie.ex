@@ -33,6 +33,6 @@ defmodule Cookie.Mixfile do
     [
      maintainers: ["Peter Saxton"],
      licenses: ["Apache 2.0"],
-     links: %{"GitHub" => "https://github.com/CrowdHailer/raxx/tree/master/cookie"}]
+     links: %{"GitHub" => "https://github.com/CrowdHailer/raxx/tree/master/cookie.ex"}]
   end
 end
