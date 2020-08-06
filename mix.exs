@@ -2,15 +2,17 @@ defmodule Cookie.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :cookie,
-     version: "0.1.1",
-     elixir: "~> 1.3",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps(),
-     description: description(),
-     docs: [extras: ["README.md"], main: "readme"],
-     package: package()]
+    [
+      app: :cookie,
+      version: "0.1.1",
+      elixir: "~> 1.3",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      deps: deps(),
+      description: description(),
+      docs: [extras: ["README.md"], main: "readme"],
+      package: package()
+    ]
   end
 
   def application do
@@ -31,8 +33,9 @@ defmodule Cookie.Mixfile do
 
   defp package do
     [
-     maintainers: ["Peter Saxton"],
-     licenses: ["Apache 2.0"],
-     links: %{"GitHub" => "https://github.com/CrowdHailer/cookie.ex"}]
+      maintainers: ["Peter Saxton"],
+      licenses: ["Apache 2.0"],
+      links: %{"GitHub" => "https://github.com/CrowdHailer/cookie.ex"}
+    ]
   end
 end
