@@ -100,7 +100,7 @@ defmodule Cookie do
 
       # Can serialize collection of cookies
       iex> serialize(%{"key1" => "value1", "key2" => "value2"})
-      "key1=value1, key2=value2"
+      "key1=value1; key2=value2"
 
   Be nice to property test serialize and parse.
   """
@@ -111,6 +111,6 @@ defmodule Cookie do
   def serialize(cookies) do
     cookies
     |> Enum.map(&serialize/1)
-    |> Enum.join(", ")
+    |> Enum.join("; ")
   end
 end
